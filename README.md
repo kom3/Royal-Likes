@@ -42,7 +42,7 @@ $igid = "454877888";
 $iguser = "kouhota";
 $a->login($iguser, $igid);
 $fl = $a->setIgis($igid)->getFollowersList(1);
-for($i=0;$i<count($fl);$i++){
+for($i=0;$i&lt;count($fl);$i++){
         $hh = $fl[$i];
         $orderid = $hh['orderId'];
         $a->followAction($orderid); // Response at $a->lastResponse 
