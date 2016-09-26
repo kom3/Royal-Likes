@@ -63,6 +63,27 @@ class RoyalLikes {
         $http = $this->response($this->http("user/".$this->igis."/getLikes/".$this->igis, true, $content));
         return $this;
     }
+    public function addOrderViews($package, $mediaid, $userid, $username, $start){
+        switch($package){
+            case 1:
+                $package = "com.ty.vl.loops1"; // 100
+            break;
+            case 2:
+                $package = "com.ty.vl.loops2"; // 2200
+            break;
+            case 3:
+                $package = "com.ty.vl.loops3"; // 13000
+            break;
+            case 4:
+                $package = "com.ty.vl.loops4"; // 50000
+            break;
+            default:
+                return false;
+        }
+        $content = '{"goodsId":"'.$package.'","videoUrl":"http://scontent-sit4-1.cdninstagram.com/t51.2885-15/e15/14504743_1417676425197751_4417461803391385600_n.jpg","mediaId":"1347882060748412104","postCode":"BK0o5fGB9TI","videoLowURL":"http://scontent-sit4-1.cdninstagram.com/t51.2885-15/s320x320/e15/14504743_1417676425197751_4417461803391385600_n.jpg","targetUserId":'.$userid.',"thumbnailUrl":"http://scontent-sit4-1.cdninstagram.com/t51.2885-15/e15/14504743_1417676425197751_4417461803391385600_n.jpg","timestamp":1474900084,"trackingToken":"eyJ2ZXJzaW9uIjo1LCJwYXlsb2FkIjp7ImlzX2FuYWx5dGljc190cmFja2VkIjpmYWxzZSwidXVpZCI6IjhhZjA3NmExYTEwMzQ4NmI4NTg1MDE2MDI1MmEzMmMxMTM0Nzg4MjA2MDc0ODQxMjEwNCIsInNlcnZlcl90b2tlbiI6IjE0NzQ5MDIzMTM5MzB8MTM0Nzg4MjA2MDc0ODQxMjEwNHwzOTczNzU5OTE5fDU2YmNiN2ZhNGE4ZmVhMmQ2NGExYTI0MjNlNzI4YjVkZmM2ODUxYjA5NGU0YWUzNDYzNjg4MWEzNWQ3NmViYWIifSwic2lnbmF0dXJlIjoiIn0\u003d","userName":"'.$username.'","startAt":'.$start.',"goodsType":5}';
+        $http = $this->response($this->http("user/".$this->igis."/getViews/".$this->igis, true, $content));
+        return $this;
+    }
     public function getFollowersList($type = 0) { // 1 Followers 0 Likes
         $http = $this->response($this->http("user/".$this->igis."/getBoard/".$type."/" . $this->igis));
         return $http['boardList'];
