@@ -20,7 +20,7 @@ Jika anda merupakan user yang telah terdaftar, disarankan menggunakan ini daripa
 <p>Mengambil daftar task tersedia, berikut contoh untuk followers :</p>
 <pre>$a->getFollowersList(1);</pre>
 <p>Berikut untuk like :</p>
-<pre>$a->getFollowersList(1);</pre>
+<pre>$a->getFollowersList(0);</pre>
 <p>Jika menggunakan followers, anda akan mendapatkan +4 poin tiap action, sedangkan jika like +1.</p>
 <h3>Action</h3>
 <pre>$a->followAction($orderid);</pre>
@@ -43,11 +43,11 @@ $iguser = "kouhota";
 $a->login($iguser, $igid);
 $fl = $a->setIgis($igid)->getFollowersList(1);
 for($i=0;$i<count($fl);$i++){
-    $hh = $fl[$i];
-    $orderid = $hh['orderId'];
-    $a->followAction($orderid);
-    var_dump($a->lastResponse); 
-}</pre>
+        $hh = $fl[$i];
+        $orderid = $hh['orderId'];
+        $a->followAction($orderid); // Response at $a->lastResponse 
+        var_dump($a->lastResponse); 
+    }</pre>
 <p>Untuk penukaran coin :</p>
 <pre>require('royalLikes.php');
 $a = new RoyalLikes();
