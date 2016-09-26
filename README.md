@@ -33,6 +33,8 @@ Contoh mengambil response terakhir :
 <p>Contoh diatas, 1 sebagai package id (1-6), parameter kedua username anda, parameter ketiga (1469) ubah sebagai start followers.</p>
 <p>Penukaran likes :</p>
 <pre>$a->setIgis($igid)->addOrderLikes(1, "1255555555544", "kouhota", 1469);</pre>
+<p>Penukaran Views :</p>
+<pre>$a->setIgis($igid)->addOrderViews(1, "1345150546096603952", $igid, "pandarez24", 28); print_r($a->lastResponse);</pre>
 <p>Contoh diatas, 1 sebagai package id (1-4), parameter kedua adalah media id, parameter ketiga adalah username akun anda, parameter keempat (1469) ubah sebagai start followers.</p>
 <h3>Contoh Lengkap</h3>
 <p>Untuk mendapatkan coin :</p>
