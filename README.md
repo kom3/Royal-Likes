@@ -1,8 +1,8 @@
 # royal-likes
 Royal Likes app direct access!
 
-App Name : Get Followers
-Package Name : com.ty.royallikes
+App Name : Get Followers<br/>
+Package Name : com.ty.royallikes<br/>
 Download Link : https://apkpure.com/royal-likes-for-instagram/com.ty.royallikes (Thanks APKPURE :*)
 
 <h2>Setup</h2>
