@@ -86,7 +86,11 @@ class RoyalLikes {
     }
     public function getFollowersList($type = 0) { // 1 Followers 0 Likes
         $http = $this->response($this->http("user/".$this->igis."/getBoard/".$type."/" . $this->igis));
-        return $http['boardList'];
+        if(empty($http['boardList']) OR count($http['boardList']) == 0){
+            return [];
+        } else {
+            return $http['boardList'];
+        }
     }
     public function followAction($orderid){
         $content = '{"actionToken":"'.$this->getactionKey($orderid).'","action":0,"orderId":'.$orderid.'}';
