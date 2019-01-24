@@ -1,4 +1,5 @@
-# royal-likes
+# Royal-Likes
+# This script not work any more, for documentation only!
 Royal Likes app direct access!
 
 App Name : Get Followers<br/>
